@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import chrome from "../../Assets/TechIcons/Google Chrome.svg";
 import vsCode from "../../Assets/TechIcons/vscode.svg";
-import { SiPycharm, SiWindows11 } from "react-icons/si";
+import { SiWindows11 } from "react-icons/si";
 
 function Toolstack() {
   return (
