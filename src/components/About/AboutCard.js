@@ -22,7 +22,7 @@ function AboutCard() {
             Outside of coding, I love engaging in activities that keep me
             creative and inspired:
           </p>
-
+    
           <ul>
             <li className="about-activity">
               <ImPointRight /> Building Innovative Projects 🚀

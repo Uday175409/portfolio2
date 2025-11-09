@@ -6,13 +6,14 @@ import Particle from "../Particle";
 // import emotion from "../../Assets/Projects/emotion.png";
 // import editor from "../../Assets/Projects/codeEditor.png";
 // import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
+// import suicide from "../../Assets/Projects/suicide.png";
 // import bitsOfCode from "../../Assets/Projects/blog.png";
 import browsercompiler from "../../Assets/Projects/browsercompiler.png";
 import newsWebsite from "../../Assets/Projects/newsWebsite.png";
 import jobPortal from "../../Assets/Projects/jobPortal.png";
 import gadgethub from "../../Assets/Projects/gadgethub.png";
 import recipyFinder from "../../Assets/Projects/recipyFinder.png";
+import carDealership from "../../Assets/Projects/carDealership.png"
 
 function Projects() {
   return (
@@ -81,7 +82,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={carDealership}
               isBlog={false}
               title="Car Dealership Website"
               description="Static showroom website featuring car inventory with search/filter functionality and detailed vehicle pages. Demonstrates responsive grid systems, accessible markup, cross-device compatibility, and production-like frontend development practices."
