@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import CertificateCard from "./CertificateCard";
-import Particle from "../Particle";
+// import Particle from "../Particle";
 
 // Course certificates
 import exploratoryDataAnalysis from "../../Assets/certificates/course/Exploratory Data Analysis for Machine Learning.pdf";
@@ -223,7 +223,7 @@ function Certificates() {
             >
               Participation Certificates ({participationCertificates.length})
             </button>
-            
+
             <button
               onClick={(e) => {
                 e.preventDefault();
