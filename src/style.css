@@ -759,3 +759,140 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+/* Certificate Page Styles */
+.certificate-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.certificate-buttons .btn {
+  min-width: 120px;
+  font-size: 0.9em;
+}
+
+.btn-success {
+  color: #fff !important;
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+.btn-success:hover {
+  color: #fff !important;
+  background-color: #218838 !important;
+  border-color: #1e7e34 !important;
+}
+
+.btn-outline-primary {
+  color: #623686 !important;
+  border-color: #623686 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-primary:hover {
+  color: #fff !important;
+  background-color: #623686 !important;
+  border-color: #623686 !important;
+}
+
+/* Certificate Filter Buttons */
+.certificate-filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.certificate-filter-buttons .btn {
+  transition: all 0.3s ease !important;
+  font-weight: 500 !important;
+}
+
+.certificate-filter-buttons .btn-primary {
+  background-color: #623686 !important;
+  border-color: #623686 !important;
+  box-shadow: 0 4px 8px rgba(98, 54, 134, 0.3) !important;
+}
+
+.certificate-filter-buttons .btn-outline-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(98, 54, 134, 0.4) !important;
+}
+
+/* Ensure certificate filter buttons are always clickable */
+.certificate-filter-buttons button,
+button.btn {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  user-select: none !important;
+}
+
+button.btn:disabled {
+  pointer-events: none !important;
+  cursor: not-allowed !important;
+}
+
+/* Fix for particle interference with buttons */
+#tsparticles {
+  position: absolute !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+.certificate-filter-buttons button {
+  position: relative !important;
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+}
+
+/* Certificate Preview Styles */
+.certificate-preview {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.preview-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.certificate-preview:hover .preview-overlay {
+  opacity: 1;
+}
+
+.preview-overlay span {
+  color: white;
+  font-size: 0.9em;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.certificate-icon-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px 10px 0 0;
+}
+
+.certificate-icon {
+  font-size: 4em;
+  opacity: 0.7;
+}
