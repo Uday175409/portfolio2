@@ -31,73 +31,84 @@ function Certificates() {
   const courseCertificates = [
     {
       title: "Exploratory Data Analysis for Machine Learning",
-      description: "Comprehensive course covering data exploration techniques, statistical analysis, and data visualization methods for machine learning projects.",
+      description:
+        "Comprehensive course covering data exploration techniques, statistical analysis, and data visualization methods for machine learning projects.",
       category: "Course",
-      certificatePath: exploratoryDataAnalysis
+      certificatePath: exploratoryDataAnalysis,
     },
     {
       title: "Inheritance and Data Structures in Java",
-      description: "Advanced Java programming course focusing on object-oriented programming concepts, inheritance principles, and data structure implementations.",
+      description:
+        "Advanced Java programming course focusing on object-oriented programming concepts, inheritance principles, and data structure implementations.",
       category: "Course",
-      certificatePath: inheritanceDataStructures
+      certificatePath: inheritanceDataStructures,
     },
     {
       title: "Introduction to HTML, CSS, & JavaScript",
-      description: "Foundational web development course covering frontend technologies including HTML markup, CSS styling, and JavaScript programming.",
+      description:
+        "Foundational web development course covering frontend technologies including HTML markup, CSS styling, and JavaScript programming.",
       category: "Course",
-      certificatePath: introHtmlCssJs
+      certificatePath: introHtmlCssJs,
     },
     {
       title: "Introduction to Java",
-      description: "Beginner-friendly Java programming course covering core concepts, syntax, and fundamental programming principles.",
+      description:
+        "Beginner-friendly Java programming course covering core concepts, syntax, and fundamental programming principles.",
       category: "Course",
-      certificatePath: introJava
-    }
+      certificatePath: introJava,
+    },
   ];
 
   const participationCertificates = [
     {
       title: "ACM TCET Code",
-      description: "Participated in ACM TCET coding competition, demonstrating problem-solving skills and algorithmic thinking.",
+      description:
+        "Participated in ACM TCET coding competition, demonstrating problem-solving skills and algorithmic thinking.",
       category: "Participation",
-      certificatePath: acmTcetCode
+      certificatePath: acmTcetCode,
     },
     {
       title: "AlgoQuiz – DSA MCQ Faceoff of CodeClash 2025",
-      description: "Participated in data structures and algorithms quiz competition, testing theoretical knowledge and problem-solving abilities.",
+      description:
+        "Participated in data structures and algorithms quiz competition, testing theoretical knowledge and problem-solving abilities.",
       category: "Participation",
-      certificatePath: algoQuiz
+      certificatePath: algoQuiz,
     },
     {
       title: "CodeClash 2025",
-      description: "Participated in CodeClash 2025 programming competition, showcasing coding skills and competitive programming abilities.",
+      description:
+        "Participated in CodeClash 2025 programming competition, showcasing coding skills and competitive programming abilities.",
       category: "Participation",
-      certificatePath: codeClash2025
+      certificatePath: codeClash2025,
     },
     {
       title: "CodeFt 5.0",
-      description: "Participated in CodeFt 5.0 hackathon, demonstrating teamwork, innovation, and technical skills in software development.",
+      description:
+        "Participated in CodeFt 5.0 hackathon, demonstrating teamwork, innovation, and technical skills in software development.",
       category: "Participation",
-      certificatePath: codeft5
+      certificatePath: codeft5,
     },
     {
       title: "NASA Space Apps Challenge",
-      description: "Participated in NASA Space Apps Challenge, working on space-related challenges and developing innovative solutions.",
+      description:
+        "Participated in NASA Space Apps Challenge, working on space-related challenges and developing innovative solutions.",
       category: "Participation",
-      certificatePath: nasaSpaceApps
+      certificatePath: nasaSpaceApps,
     },
     {
       title: "Online Round of CSS Battle",
-      description: "Participated in CSS Battle online competition, demonstrating CSS skills and creative problem-solving in web design.",
+      description:
+        "Participated in CSS Battle online competition, demonstrating CSS skills and creative problem-solving in web design.",
       category: "Participation",
-      certificatePath: cssBattle
+      certificatePath: cssBattle,
     },
     {
       title: "Quiz Round (on Unstop) of Placement Apti",
-      description: "Participated in placement aptitude quiz on Unstop platform, testing analytical and reasoning abilities.",
+      description:
+        "Participated in placement aptitude quiz on Unstop platform, testing analytical and reasoning abilities.",
       category: "Participation",
-      certificatePath: placementApti
-    }
+      certificatePath: placementApti,
+    },
   ];
 
   const allCertificates = [...courseCertificates, ...participationCertificates];
@@ -109,7 +120,10 @@ function Certificates() {
       console.log("Showing course certificates:", courseCertificates.length);
       return courseCertificates;
     } else if (activeFilter === "participation") {
-      console.log("Showing participation certificates:", participationCertificates.length);
+      console.log(
+        "Showing participation certificates:",
+        participationCertificates.length
+      );
       return participationCertificates;
     }
     console.log("Showing all certificates:", allCertificates.length);
@@ -124,34 +138,36 @@ function Certificates() {
           My <strong className="purple">Certificates </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are my achievements and certificates from various courses and competitions.
+          Here are my achievements and certificates from various courses and
+          competitions.
         </p>
-        
+
         {/* Debug State Display */}
         {/* <p style={{ color: "yellow", textAlign: "center", fontSize: "14px" }}>
           Current Filter: {activeFilter} | Showing {filteredCertificates().length} certificates
         </p> */}
-        
-        {/* Filter Buttons - FIXED WITH Z-INDEX */}
-        <div style={{ 
-          textAlign: "center", 
-          marginBottom: "30px",
-          padding: "20px",
-          backgroundColor: "rgba(255, 255, 255, 0.1)",
-          borderRadius: "10px",
-          position: "relative",
-          zIndex: 1000
-        }}>
-          <h3 style={{ color: "white", marginBottom: "20px" }}>Filter Certificates</h3>
-          
-          <div style={{ 
-            display: "flex", 
-            justifyContent: "center", 
-            gap: "15px", 
-            flexWrap: "wrap",
+
+        {/* Filter Buttons - CLEAN WITHOUT BACKGROUND */}
+        <div
+          style={{
+            textAlign: "center",
+            marginBottom: "30px",
             position: "relative",
-            zIndex: 1001
-          }}>
+            zIndex: 1000,
+          }}
+        >
+          {/* <h3 style={{ color: "white", marginBottom: "20px" }}>Filter Certificates</h3> */}
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: "15px",
+              flexWrap: "wrap",
+              position: "relative",
+              zIndex: 1001,
+            }}
+          >
             <button
               onClick={(e) => {
                 e.preventDefault();
@@ -162,7 +178,8 @@ function Certificates() {
               }}
               style={{
                 padding: "12px 24px",
-                backgroundColor: activeFilter === "all" ? "#6f42c1" : "transparent",
+                backgroundColor:
+                  activeFilter === "all" ? "#6f42c1" : "transparent",
                 color: activeFilter === "all" ? "white" : "#6f42c1",
                 border: "2px solid #6f42c1",
                 borderRadius: "25px",
@@ -173,10 +190,38 @@ function Certificates() {
                 minWidth: "200px",
                 position: "relative",
                 zIndex: 1002,
-                pointerEvents: "auto"
+                pointerEvents: "auto",
               }}
             >
               All Certificates ({allCertificates.length})
+            </button>
+
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log("PARTICIPATION BUTTON CLICKED!");
+                // alert("Participation button clicked!");
+                handleButtonClick("participation");
+              }}
+              style={{
+                padding: "12px 24px",
+                backgroundColor:
+                  activeFilter === "participation" ? "#6f42c1" : "transparent",
+                color: activeFilter === "participation" ? "white" : "#6f42c1",
+                border: "2px solid #6f42c1",
+                borderRadius: "25px",
+                cursor: "pointer",
+                fontSize: "16px",
+                fontWeight: "bold",
+                transition: "all 0.3s ease",
+                minWidth: "220px",
+                position: "relative",
+                zIndex: 1002,
+                pointerEvents: "auto",
+              }}
+            >
+              Participation Certificates ({participationCertificates.length})
             </button>
             
             <button
@@ -189,7 +234,8 @@ function Certificates() {
               }}
               style={{
                 padding: "12px 24px",
-                backgroundColor: activeFilter === "course" ? "#6f42c1" : "transparent",
+                backgroundColor:
+                  activeFilter === "course" ? "#6f42c1" : "transparent",
                 color: activeFilter === "course" ? "white" : "#6f42c1",
                 border: "2px solid #6f42c1",
                 borderRadius: "25px",
@@ -200,44 +246,21 @@ function Certificates() {
                 minWidth: "200px",
                 position: "relative",
                 zIndex: 1002,
-                pointerEvents: "auto"
+                pointerEvents: "auto",
               }}
             >
               Course Certificates ({courseCertificates.length})
-            </button>
-            
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                console.log("PARTICIPATION BUTTON CLICKED!");
-                // alert("Participation button clicked!");
-                handleButtonClick("participation");
-              }}
-              style={{
-                padding: "12px 24px",
-                backgroundColor: activeFilter === "participation" ? "#6f42c1" : "transparent",
-                color: activeFilter === "participation" ? "white" : "#6f42c1",
-                border: "2px solid #6f42c1",
-                borderRadius: "25px",
-                cursor: "pointer",
-                fontSize: "16px",
-                fontWeight: "bold",
-                transition: "all 0.3s ease",
-                minWidth: "220px",
-                position: "relative",
-                zIndex: 1002,
-                pointerEvents: "auto"
-              }}
-            >
-              Participation Certificates ({participationCertificates.length})
             </button>
           </div>
         </div>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           {filteredCertificates().map((certificate, index) => (
-            <Col md={4} className="project-card" key={`${certificate.category}-${certificate.title}-${index}`}>
+            <Col
+              md={4}
+              className="project-card"
+              key={`${certificate.category}-${certificate.title}-${index}`}
+            >
               <CertificateCard
                 title={certificate.title}
                 description={certificate.description}
