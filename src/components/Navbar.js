@@ -12,6 +12,7 @@ import {
 
 import { CgFileDocument } from "react-icons/cg";
 import { MdCardMembership } from "react-icons/md";
+import { ImBooks } from "react-icons/im";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -86,6 +87,16 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <MdCardMembership style={{ marginBottom: "2px" }} /> Certificates
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/academic"
+                onClick={() => updateExpanded(false)}
+              >
+                <ImBooks style={{ marginBottom: "2px" }} /> Academic
               </Nav.Link>
             </Nav.Item>
 

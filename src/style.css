@@ -896,3 +896,206 @@ button.btn:disabled {
   font-size: 4em;
   opacity: 0.7;
 }
+
+/* --------- */
+/* Academic Section */
+/* --------- */
+.academic-section {
+  position: relative;
+  background-image: var(--section-background-color);
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+.academic-card {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.academic-card-view {
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  color: white !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(200, 137, 230, 0.137) !important;
+  transition: all 0.5s ease 0s !important;
+  height: 100%;
+}
+
+.academic-card-view:hover {
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+}
+
+.academic-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.academic-result-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.academic-image-container:hover .academic-result-image {
+  transform: scale(1.05);
+}
+
+.academic-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.academic-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+}
+
+.academic-image-container:hover .academic-overlay {
+  opacity: 1;
+}
+
+.academic-overlay span {
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.modal-result-image {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.academic-score {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(200, 137, 230, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(200, 137, 230, 0.3);
+}
+
+.score-label {
+  color: #c770f0;
+  font-weight: 600;
+  margin-right: 8px;
+  font-size: 0.95em;
+}
+
+.score-value {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.academic-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.academic-btn {
+  border: 1px solid rgba(200, 137, 230, 0.6) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease 0s !important;
+  margin-top: 15px !important;
+}
+
+.academic-btn:hover {
+  color: #a588c0 !important;
+  transform: scale(1.05) !important;
+  background-color: rgba(200, 137, 230, 0.15) !important;
+  border-color: rgba(200, 137, 230, 0.8) !important;
+}
+
+/* Modal Styling */
+.modal-content {
+  background-color: #1a1a2e !important;
+  border: 1px solid rgba(200, 137, 230, 0.3) !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(200, 137, 230, 0.3) !important;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-title {
+  color: var(--imp-text-color) !important;
+}
+
+.modal-body {
+  color: white !important;
+}
+
+.modal-body h5, .modal-body h6 {
+  color: var(--imp-text-color) !important;
+}
+
+.modal-body .table {
+  color: white !important;
+}
+
+.modal-body .table th {
+  background-color: rgba(200, 137, 230, 0.2) !important;
+  border-color: rgba(200, 137, 230, 0.3) !important;
+  color: var(--imp-text-color) !important;
+}
+
+.modal-body .table td {
+  border-color: rgba(200, 137, 230, 0.2) !important;
+}
+
+.modal-body .table-striped > tbody > tr:nth-of-type(odd) > td {
+  background-color: rgba(200, 137, 230, 0.1) !important;
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(200, 137, 230, 0.3) !important;
+}
+
+/* Responsive adjustments for Academic section */
+@media (max-width: 767px) {
+  .academic-card {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .academic-section h1 {
+    font-size: 1.8em !important;
+  }
+}
