@@ -56,8 +56,14 @@ button:focus {
 /*Scrollbar   */
 /* --------- */
 
-::-webkit-scrollbar {
+/* Vertical scrollbar only */
+::-webkit-scrollbar:vertical {
   width: 7px;
+}
+
+/* Hide horizontal scrollbar */
+::-webkit-scrollbar:horizontal {
+  display: none;
 }
 
 /* Track */
@@ -75,6 +81,15 @@ button:focus {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(222, 130, 235, 0.911);
   border-radius: 12px;
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+}
+
+.App {
+  overflow-x: hidden;
 }
 
 /* --------- */
@@ -409,25 +424,64 @@ button:focus {
 .footer {
   background-color: rgb(10, 4, 22);
   bottom: 0 !important;
-  padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  padding-top: 30px !important;
+  padding-bottom: 20px !important ;
 }
 .footer-copywright {
-  text-align: center !important;
+  text-align: left !important;
+}
+
+.footer-navigation {
+  text-align: left !important;
+  margin-bottom: 20px !important;
+}
+
+.footer-nav-links {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.footer-nav-links li {
+  margin-bottom: 8px !important;
+}
+
+.footer-nav-links a {
+  font-size: 1.1em !important;
+  transition: all 0.3s ease !important;
+}
+
+.footer-nav-links a:hover {
+  color: #c770f0 !important;
+  transform: translateX(5px) !important;
 }
 
 .footer-body {
   z-index: 1;
-  text-align: center !important;
+  text-align: right !important;
 }
 
 @media (max-width: 767px) {
   .footer-copywright {
     text-align: center !important;
+    margin-bottom: 15px !important;
+  }
+
+  .footer-navigation {
+    text-align: center !important;
+    margin: 20px 0 !important;
+  }
+
+  .footer-navigation h4 {
+    text-align: center !important;
   }
 
   .footer-body {
     text-align: center !important;
+  }
+  
+  .footer-nav-links a:hover {
+    transform: none !important;
   }
 }
 
@@ -454,6 +508,39 @@ button:focus {
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
+}
+
+.projects-preview-section {
+  position: relative !important;
+  background-image: var(--section-background-color) !important;
+}
+
+.projects-preview-section .project-heading {
+  color: white !important;
+  font-size: 2.3em !important;
+  font-weight: 700 !important;
+}
+
+.certificates-preview-section {
+  position: relative !important;
+  background-image: var(--section-background-color) !important;
+}
+
+.certificates-preview-section .project-heading {
+  color: white !important;
+  font-size: 2.3em !important;
+  font-weight: 700 !important;
+}
+
+.academic-preview-section {
+  position: relative !important;
+  background-image: var(--section-background-color) !important;
+}
+
+.academic-preview-section .project-heading {
+  color: white !important;
+  font-size: 2.3em !important;
+  font-weight: 700 !important;
 }
 
 .project-card {

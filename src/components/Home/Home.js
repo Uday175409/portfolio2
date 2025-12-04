@@ -3,6 +3,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
+import ProjectsPreview from "./ProjectsPreview";
+import CertificatesPreview from "./CertificatesPreview";
+import AcademicPreview from "./AcademicPreview";
 import Type from "./Type";
 import {
   AiFillGithub,
@@ -48,6 +51,9 @@ function Home() {
         </Container>
       </Container>
       <Home2 />
+      <ProjectsPreview />
+      <CertificatesPreview />
+      <AcademicPreview />
 
       <Container>
         <Row style={{ paddingTop: "50px", paddingBottom: "80px" }}>
