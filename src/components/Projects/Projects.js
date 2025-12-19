@@ -13,7 +13,7 @@ import newsWebsite from "../../Assets/Projects/newsWebsite.png";
 import jobPortal from "../../Assets/Projects/jobPortal.png";
 import gadgethub from "../../Assets/Projects/gadgethub.png";
 import recipyFinder from "../../Assets/Projects/recipyFinder.png";
-import carDealership from "../../Assets/Projects/carDealership.png"
+import carDealership from "../../Assets/Projects/carDealership.png";
 
 function Projects() {
   return (
@@ -39,22 +39,23 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={browsercompiler}
+              isBlog={false}
+              title="BrowserCompiler"
+              description="Multi-language online code execution platform with Monaco editor, supporting Python, C, C++, and Java. Features secure sandboxed execution using Docker, FastAPI-based execution microservice, problem management, and automated test-case validation with submission history tracking."
+              ghLink="https://github.com/Uday175409/BrowserCompiler"
+              // demoLink="https://ik.imagekit.io/Uday/videos/videos/browser%20compiler%20project.mp4?tr=orig&updatedAt=1762433805444"
+              demoLink="https://browsercompiler-1.onrender.com/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={recipyFinder}
               isBlog={false}
               title="Recipe Finder"
               description="Quick searchable recipe discovery app that helps users find recipes by ingredient, cuisine, or dietary preference. Features search functionality, dietary filters (vegetarian, vegan, gluten-free), recipe details with nutrition info, and favorite recipes management."
               ghLink="https://github.com/uday-0408/Recipe_finder"
               demoLink="https://recipe-finder-frontend-sooty.vercel.app/"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={browsercompiler}
-              isBlog={false}
-              title="BrowserCompiler"
-              description="Multi-language online code execution platform with Monaco editor, supporting Python, C, C++, and Java. Features secure sandboxed execution using Docker, FastAPI-based execution microservice, problem management, and automated test-case validation with submission history tracking."
-              ghLink="https://github.com/Uday175409/BrowserCompiler"
-              demoLink="https://ik.imagekit.io/Uday/videos/videos/browser%20compiler%20project.mp4?tr=orig&updatedAt=1762433805444"
             />
           </Col>
 
@@ -90,6 +91,7 @@ function Projects() {
               // demoLink="https://uday-0408.github.io/Car-dealership/"
             />
           </Col>
+          
         </Row>
       </Container>
     </Container>
