@@ -14,11 +14,12 @@ import jobPortal from "../../Assets/Projects/jobPortal.png";
 import gadgethub from "../../Assets/Projects/gadgethub.png";
 import recipyFinder from "../../Assets/Projects/recipyFinder.png";
 import carDealership from "../../Assets/Projects/carDealership.png";
+import chatbot from "../../Assets/Projects/chatbot.png";
 
 function Projects() {
   return (
     <Container fluid className="project-section">
-      <Particle />
+      <Particle />  
       <Container>
         <h1 className="project-heading">
           My Recent <strong className="purple">Works </strong>
@@ -67,6 +68,16 @@ function Projects() {
               description="Modern MERN job portal connecting students with recruiters. Features role-based JWT authentication, company/job management, one-click applications, resume uploads via Cloudinary, Redux Toolkit state management, and recruiter dashboard for managing applicants."
               ghLink="https://github.com/uday-0408/JP"
               // demoLink="https://job-connect-uday.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={chatbot}
+              isBlog={false}
+              title="AI Chatbot Application"
+              description="AI-powered chatbot system leveraging Large Language Models (LLMs) for intelligent, context-aware conversations. Includes prompt handling, session-based memory management, and seamless frontend–backend communication via REST APIs. Demonstrates LLM integration, conversational state management, asynchronous request handling, and scalable full-stack architecture for real-world AI applications."
+              ghLink="https://github.com/Uday175409/chatbot"
+              demoLink="https://frontend-chatbot-rust.vercel.app/"
             />
           </Col>
 
